@@ -231,6 +231,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="lg:w-[55%] w-full max-w-3xl">
 				<div class="relative bg-base-100 rounded-xl shadow-2xl overflow-hidden">
 					<div class="bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -244,14 +245,25 @@
 								<div class="flex items-center bg-gray-100/80 rounded-lg px-3 py-1.5">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-gray-400 mr-2">
 										<path fill-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z" clip-rule="evenodd"></path>
-									</svg><span class="text-sm text-gray-600 font-medium">app.docflowbot.com</span><span class="text-sm text-gray-400">/dashboard</span></div>
+									</svg>
+									<span class="text-sm text-gray-600 font-medium">app.docflowbot.com</span>
+									<span class="text-sm text-gray-400">/dashboard</span>
+								</div>
 							</div>
 							<div class="w-14 hidden sm:block"></div>
 						</div>
 					</div>
-					<!-- картинка/скриншот -->
+					<!-- Скриншот панели -->
+					<div class="bg-gray-50 p-4">
+						<img 
+							src="/next/static/media/screenshot_panel.jpg" 
+							alt="Панель управления DocFlow Bot"
+							class="w-full h-auto rounded-lg shadow-md"
+						/>
+					</div>
 				</div>
 			</div>
+
 		</section>
 		<section class="py-24 bg-gradient-to-b from-gray-50 to-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -464,9 +476,10 @@
 					<h2 class="font-extrabold text-gray-900 text-4xl md:text-5xl mb-6">Как это работает<span class="block mt-2 text-violet-600">Просто как 1-2-3-4</span></h2>
 					<p class="text-xl text-gray-600 leading-relaxed">От загрузки данных до доставки документов — за считанные минуты</p>
 				</div>
-				<div class="relative">
-					<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 transform -translate-y-1/2"></div>
-					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+
+				<div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+					<!-- Левый столбец с карточками 1 и 2 -->
+					<div class="lg:w-1/3 flex flex-col gap-8">
 						<div class="relative">
 							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
 								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
@@ -478,10 +491,13 @@
 								</div>
 								<div>
 									<h3 class="text-xl font-bold text-gray-900 mb-2">Загрузите данные</h3>
-									<p class="text-gray-600 mb-4">Загрузите список получателей и шаблоны документов. Поддерживаются Excel, CSV и Google Sheets.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Импорт за 2 минуты</span></div>
+									<p class="text-gray-600 mb-4">Загрузите список получателей и шаблоны документов. Поддерживаются Excel, CSV и Google Sheets.</p>
+									<span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Импорт за 2 минуты</span>
+								</div>
 								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">1</div>
 							</div>
 						</div>
+						
 						<div class="relative">
 							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
 								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
@@ -496,10 +512,30 @@
 								</div>
 								<div>
 									<h3 class="text-xl font-bold text-gray-900 mb-2">Настройте Telegram-бота</h3>
-									<p class="text-gray-600 mb-4">Создайте своего бота или используйте нашего. Настройте приветственное сообщение и права доступа.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Без программирования</span></div>
+									<p class="text-gray-600 mb-4">Создайте своего бота или используйте нашего. Настройте приветственное сообщение и права доступа.</p>
+									<span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Без программирования</span>
+								</div>
 								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">2</div>
 							</div>
 						</div>
+					</div>
+					
+					<!-- Центральный скриншот -->
+					<div class="lg:w-1/3 flex justify-center">
+						<div class="relative w-full max-w-sm">
+							<div class="relative bg-white rounded-[2.5rem] p-4 shadow-2xl border-8 border-gray-900">
+								<div class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+								<img 
+									src="/next/static/media/screenshot_telegram.jpg" 
+									alt="Скриншот Telegram с отправкой документов"
+									class="rounded-3xl w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Правый столбец с карточками 3 и 4 -->
+					<div class="lg:w-1/3 flex flex-col gap-8">
 						<div class="relative">
 							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
 								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
@@ -510,10 +546,13 @@
 								</div>
 								<div>
 									<h3 class="text-xl font-bold text-gray-900 mb-2">Автоматическая рассылка</h3>
-									<p class="text-gray-600 mb-4">Система сгенерирует персонализированные документы для каждого получателя и отправит через бота.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Мгновенная доставка</span></div>
+									<p class="text-gray-600 mb-4">Система сгенерирует персонализированные документы для каждого получателя и отправит через бота.</p>
+									<span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Мгновенная доставка</span>
+								</div>
 								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">3</div>
 							</div>
 						</div>
+						
 						<div class="relative">
 							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
 								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
@@ -525,12 +564,15 @@
 								</div>
 								<div>
 									<h3 class="text-xl font-bold text-gray-900 mb-2">Отслеживайте результаты</h3>
-									<p class="text-gray-600 mb-4">Смотрите статистику: кто получил документы, когда скачал, какие документы просмотрены.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Полная прозрачность</span></div>
+									<p class="text-gray-600 mb-4">Смотрите статистику: кто получил документы, когда скачал, какие документы просмотрены.</p>
+									<span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Полная прозрачность</span>
+								</div>
 								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">4</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="mt-16 text-center">
 				<a href="#get_started" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors group">
 					Начать пользоваться
@@ -953,6 +995,10 @@
 									<div class="space-y-2">
 										<label for="company" class="block text-sm font-medium text-white/80">Название компании</label>
 										<input required="" type="text" id="company" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="ООО 'Ваша компания'" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="role" class="block text-sm font-medium text-white/80">Ваша роль в компании</label>
+										<input required="" type="text" id="role" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="Например: Директор, Юрист, Менеджер по продажам" value="" />
 									</div>
 									<div class="space-y-2">
 										<label for="documents" class="block text-sm font-medium text-white/80">Какие документы вы рассылаете?</label>
