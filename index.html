@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="__className_d65c78">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charSet="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preload" href="/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" crossorigin="" type="font/woff2" />
+	<link rel="stylesheet" href="/_next/static/css/1ccb63eaaf4b279f.css" data-precedence="next" />
+	<link rel="stylesheet" href="/_next/static/css/48340cfe5c3cfec7.css" data-precedence="next" />
+	<!-- <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-5ZQTRPVZ" as="script" /> -->
+	<meta name="theme-color" content="#7c3aed" />
+	<title>Google Maps Business Extractor - Best Extension to Scrape More Verified Leads</title>
+	<meta name="description" content="Automated lead generation platform that turns Google Maps searches into verified business contacts. Get names, phones, and emails in minutes, not hours." />
+	<meta name="application-name" content="ScrapeMyLeads" />
+	<meta name="keywords" content="ScrapeMyLeads" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:title" content="ScrapeMyLeads" />
+	<meta property="og:description" content="Automated lead generation platform that turns Google Maps searches into verified business contacts. Get names, phones, and emails in minutes, not hours." />
+	<meta property="og:url" content="https://scrapemyleads.com" />
+	<meta property="og:site_name" content="ScrapeMyLeads" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="788" />
+	<meta property="og:image" content="https://scrapemyleads.com/opengraph-image.png?0e3dd4a49af1e23a" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="ScrapeMyLeads" />
+	<meta name="twitter:description" content="Automated lead generation platform that turns Google Maps searches into verified business contacts. Get names, phones, and emails in minutes, not hours." />
+	<meta name="twitter:image:type" content="image/png" />
+	<meta name="twitter:image:width" content="1200" />
+	<meta name="twitter:image:height" content="788" />
+	<meta name="twitter:image" content="https://scrapemyleads.com/twitter-image.png?0e3dd4a49af1e23a" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+	<link rel="icon" href="/icon8eb7.png?e49f1db3c8d96666" type="image/png" sizes="800x800" />
+	<link rel="apple-touch-icon" href="/apple-icon8eb7.png?e49f1db3c8d96666" type="image/png" sizes="800x800" />
+	<meta name="next-size-adjust" />
+</head>
+<!--$!-->
+<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+<!--/$-->
+
+<body>
+	<!--$!-->
+	<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+	<!--/$-->
+	<style>
+	#nprogress {
+		pointer-events: none
+	}
+	
+	#nprogress .bar {
+		background: #7c3aed;
+		position: fixed;
+		z-index: 1600;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px
+	}
+	
+	#nprogress .peg {
+		display: block;
+		position: absolute;
+		right: 0;
+		width: 100px;
+		height: 100%;
+		box-shadow: 0 0 10px #7c3aed, 0 0 5px #7c3aed;
+		opacity: 1;
+		-webkit-transform: rotate(3deg) translate(0px, -4px);
+		-ms-transform: rotate(3deg) translate(0px, -4px);
+		transform: rotate(3deg) translate(0px, -4px)
+	}
+	
+	#nprogress .spinner {
+		display: block;
+		position: fixed;
+		z-index: 1600;
+		top: 15px;
+		right: 15px
+	}
+	
+	#nprogress .spinner-icon {
+		width: 18px;
+		height: 18px;
+		box-sizing: border-box;
+		border: 2px solid transparent;
+		border-top-color: #7c3aed;
+		border-left-color: #7c3aed;
+		border-radius: 50%;
+		-webkit-animation: nprogress-spinner 400ms linear infinite;
+		animation: nprogress-spinner 400ms linear infinite
+	}
+	
+	.nprogress-custom-parent {
+		overflow: hidden;
+		position: relative
+	}
+	
+	.nprogress-custom-parent #nprogress .bar,
+	.nprogress-custom-parent #nprogress .spinner {
+		position: absolute
+	}
+	
+	@-webkit-keyframes nprogress-spinner {
+		0% {
+			-webkit-transform: rotate(0deg)
+		}
+		100% {
+			-webkit-transform: rotate(360deg)
+		}
+	}
+	
+	@keyframes nprogress-spinner {
+		0% {
+			transform: rotate(0deg)
+		}
+		100% {
+			transform: rotate(360deg)
+		}
+	}
+	</style>
+	<!--$!-->
+	<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+	<!--/$-->
+
+	<header class="bg-base-200">
+	<nav class="container flex items-center justify-between px-8 py-4 mx-auto" aria-label="Global">
+		<div class="flex lg:flex-1">
+		<a class="flex items-center gap-2 shrink-0" href="/" title="ScrapeMyLeads homepage">
+			<img alt="ScrapeMyLeads logo" fetchPriority="high" width="32" height="32" decoding="async" data-nimg="1" class="w-8" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" />
+			<span class="font-extrabold text-lg">ScrapeMyLeads</span>
+		</a>
+		</div>
+		<div class="flex lg:hidden">
+		<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5" id="mobile-menu-button">
+			<span class="sr-only">Open main menu</span>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base-content">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+			</svg>
+		</button>
+		</div>
+		<div class="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
+		<a href="#features" class="link link-hover" title="Features">Features</a>
+		<a href="#pricing" class="link link-hover" title="Pricing">Pricing</a>
+		<a href="#faq" class="link link-hover" title="FAQ">FAQ</a>
+		</div>
+	</nav>
+	
+	<!-- Mobile menu -->
+	<div class="relative z-50 hidden" id="mobile-menu">
+		<div class="fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right">
+		<div class="flex items-center justify-between">
+			<a class="flex items-center gap-2 shrink-0" title="ScrapeMyLeads homepage" href="/">
+			<img alt="ScrapeMyLeads logo" fetchPriority="high" width="32" height="32" decoding="async" data-nimg="1" class="w-8" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" />
+			<span class="font-extrabold text-lg">ScrapeMyLeads</span>
+			</a>
+			<button type="button" class="-m-2.5 rounded-md p-2.5" id="close-menu-button">
+			<span class="sr-only">Close menu</span>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+			</button>
+		</div>
+		<div class="flow-root mt-6">
+			<div class="py-4">
+			<div class="flex flex-col gap-y-4 items-start">
+				<a href="#features" class="link link-hover" title="Features">Features</a>
+				<a href="#pricing" class="link link-hover" title="Pricing">Pricing</a>
+				<a href="#faq" class="link link-hover" title="FAQ">FAQ</a>
+			</div>
+			</div>
+			<div class="divider"></div>
+		</div>
+		</div>
+	</div>
+	</header>
+
+	<main>
+		<section class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-8 lg:py-20">
+			<div class="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start lg:w-[60%]">
+				<h1 class="font-extrabold text-3xl lg:text-6xl tracking-tight">Google Maps Business Extractor:<span class="block mt-2 text-[#6D28D9]">Get More Leads</span></h1>
+				<div class="space-y-6">
+					<p class="text-xl leading-relaxed"><span class="font-bold">Lead Generation with Google Maps—made for salespeople who want more leads.</span></p>
+					<p class="text-xl leading-relaxed">No more extensions or Chrome plugins. Easy scrape, more leads, more sales.</p>
+					<p class="text-xl leading-relaxed text-gray-700">Find fresh, highly targeted <span class="text-[#6D28D9] font-semibold">verified</span> leads in just seconds with our Google Maps scraper! Extract up-to-date business data based on your keywords and location, all directly from Google Maps.</p>
+					<p class="text-xl leading-relaxed text-gray-700">No extensions, no technical barriers—<span class="text-[#6D28D9] font-semibold">generate MORE leads compared to any other scraping tool.</span></p>
+				</div>
+
+				<div class="flex flex-col gap-4 w-full max-w-md">
+					<a href="#get_started" class="btn bg-violet-600 hover:bg-violet-700 text-white font-medium px-8 w-full flex items-center justify-center">
+						Get Started Free
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ml-2">
+						<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 13.608a.75.75 0 111.04 1.08l5.5-5.25a.75.75 0 000-1.08l-5.5-5.25a.75.75 0 11-1.04 1.08l4.158 3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
+						</svg>
+					</a>
+				</div>
+
+				<div class="flex flex-col gap-6">
+					<div class="flex items-center gap-4">
+						<div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3">
+							<div class="-space-x-5 avatar-group justy-start">
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1534528741775-53994a69daebedf8.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1517841905240-472988babdf909b6.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1539571696357-5a69c17a67c62c8b.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1507003211169-0a1dd7228f2ddb07.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1488161628813-04466f872be2113b.jpg" /></div>
+							</div>
+							<div class="flex flex-col justify-center items-center md:items-start gap-1">
+								<div class="rating">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+								</div>
+								<div class="text-base text-base-content/80"><span class="font-semibold  text-base-content">500,000+</span> leads generated</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lg:w-[55%] w-full max-w-3xl">
+				<div class="relative bg-base-100 rounded-xl shadow-2xl overflow-hidden">
+					<div class="bg-white/90 backdrop-blur-md border-b border-gray-100">
+						<div class="flex items-center justify-between px-4 py-3">
+							<div class="flex space-x-2">
+								<div class="w-3 h-3 bg-[#FF5F57] rounded-full"></div>
+								<div class="w-3 h-3 bg-[#FFBD2E] rounded-full"></div>
+								<div class="w-3 h-3 bg-[#28C840] rounded-full"></div>
+							</div>
+							<div class="flex-1 max-w-md mx-4 hidden sm:block">
+								<div class="flex items-center bg-gray-100/80 rounded-lg px-3 py-1.5">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-gray-400 mr-2">
+										<path fill-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z" clip-rule="evenodd"></path>
+									</svg><span class="text-sm text-gray-600 font-medium">app.scrapemyleads.com</span><span class="text-sm text-gray-400">/demo</span></div>
+							</div>
+							<div class="w-14 hidden sm:block"></div>
+						</div>
+					</div>
+					<!-- картинка/скриншот -->
+				</div>
+			</div>
+		</section>
+		<section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h2 class="font-extrabold text-4xl md:text-5xl text-gray-900 mb-6">Your Search for Leads<span class="block mt-2 text-violet-600">Ends Here</span></h2>
+					<p class="text-xl text-gray-600 leading-relaxed">Stop burning money on expensive lead generation tools that deliver mediocre results. Get more targeted leads, faster, with automated Google Maps scraping.</p>
+				</div>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div class="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+						<div class="flex items-start gap-4 mb-6">
+							<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-6 h-6">
+									<circle cx="12" cy="12" r="10"></circle>
+									<circle cx="12" cy="12" r="6"></circle>
+									<circle cx="12" cy="12" r="2"></circle>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-2">Lead Generation That Actually Works</h3>
+								<div class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">No more playing data-entry monkey, just pure targeted leads</div>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">Stop wasting hours manually copying data. Get verified business contacts instantly and focus on what matters – closing deals.</p>
+						<ul class="space-y-3">
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Instant business contact details</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Targeted phone numbers and emails</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Ready for outreach campaigns</span></li>
+						</ul>
+					</div>
+					<div class="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+						<div class="flex items-start gap-4 mb-6">
+							<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line w-6 h-6">
+									<path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+									<path d="m19 9-5 5-4-4-3 3"></path>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-2">Beat Your Competition</h3>
+								<div class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Don&#x27;t let competitors reach leads before you do</div>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">While others manually gather data, you&#x27;ll have enriched leads ready for contact. Stay ahead of competitors with faster, smarter prospecting.</p>
+						<ul class="space-y-3">
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Track competitor locations and ratings</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Identify market gaps</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Monitor competitive landscape</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-16 bg-violet-50 rounded-2xl p-8 text-center">
+					<p class="text-xl text-violet-900 font-medium mb-4">&quot;I was spending 2+ hours daily just finding leads. Now I get more targeted prospects in 60 minutes than I used to get in a week.&quot;</p>
+					<p class="text-violet-700">- Mark R., Sales Manager</p>
+				</div>
+			</div>
+		</section>
+		<section class="relative overflow-hidden" id="features">
+			<div class="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-gray-50"></div>
+			<div class="bg-gray-50 py-24 relative">
+				<div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="text-center max-w-3xl mx-auto mb-20">
+						<h2 class="font-extrabold text-gray-900 text-4xl md:text-5xl mb-6">Everything You Need to<span class="block mt-2 text-violet-600">Generate MORE Leads</span></h2>
+						<p class="text-xl text-gray-600 leading-relaxed">Stop wasting time on manual research. Get all the business information you need in one place.</p>
+					</div>
+					<div class="grid lg:grid-cols-2 gap-8">
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dot w-8 h-8">
+										<circle cx="12" cy="12" r="10"></circle>
+										<circle cx="12" cy="12" r="1"></circle>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Easy to Use</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">No technical expertise needed. Simply enter what you&#x27;re looking for and get verified business leads instantly.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">User-friendly interface</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">No coding required</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Get started in minutes</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-8 h-8">
+										<circle cx="12" cy="12" r="10"></circle>
+										<polyline points="12 6 12 12 16 14"></polyline>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Save Hours Daily</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Stop manual data entry. Our tool automates lead generation, giving you more time to focus on closing deals.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Efficiency boost</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Time conservation</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Enhanced productivity</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-8 h-8">
+										<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+										<path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+										<path d="M3 12A9 3 0 0 0 21 12"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Comprehensive Data</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Get complete business information including names, emails, phone numbers, addresses, ratings, and reviews.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Diverse information extraction</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Comprehensive contact details</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">In-depth Google Maps analytics</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-spreadsheet w-8 h-8">
+										<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+										<path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+										<path d="M8 13h2"></path>
+										<path d="M14 13h2"></path>
+										<path d="M8 17h2"></path>
+										<path d="M14 17h2"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Export Anywhere</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Export your leads to CSV or Excel and seamlessly integrate with your favorite CRM or sales tools.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Own your data with control</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Export flexibility: CSV, Excel</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Use data across applications</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-transparent to-gray-50"></div>
+		</section>
+		<section class="py-24 bg-white relative">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h2 class="font-extrabold text-gray-900 text-4xl md:text-5xl mb-6">How It Works<span class="block mt-2 text-violet-600">Simple as 1-2-3-4</span></h2>
+					<p class="text-xl text-gray-600 leading-relaxed">Get from registration to qualified leads in minutes, not hours</p>
+				</div>
+				<div class="relative">
+					<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 transform -translate-y-1/2"></div>
+					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-6 h-6">
+										<circle cx="11" cy="11" r="8"></circle>
+										<path d="m21 21-4.3-4.3"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Set Your Target</h3>
+									<p class="text-gray-600 mb-4">Find exactly who you&#x27;re looking for with precise targeting. Enter business type, location, and language to discover your ideal prospects.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">No technical skills needed</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">1</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog w-6 h-6">
+										<path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+										<path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+										<path d="M12 2v2"></path>
+										<path d="M12 22v-2"></path>
+										<path d="m17 20.66-1-1.73"></path>
+										<path d="M11 10.27 7 3.34"></path>
+										<path d="m20.66 17-1.73-1"></path>
+										<path d="m3.34 7 1.73 1"></path>
+										<path d="M14 12h8"></path>
+										<path d="M2 12h2"></path>
+										<path d="m20.66 7-1.73 1"></path>
+										<path d="m3.34 17 1.73-1"></path>
+										<path d="m17 3.34-1 1.73"></path>
+										<path d="m11 13.73-4 6.93"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">We Do The Heavy Lifting</h3>
+									<p class="text-gray-600 mb-4">Get 50% more leads than other tools. No extensions to install, no manual work – just sit back while we gather your leads.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Zero manual work</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">2</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download w-6 h-6">
+										<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+										<polyline points="7 10 12 15 17 10"></polyline>
+										<line x1="12" x2="12" y1="15" y2="3"></line>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Export Ready-to-Use Leads</h3>
+									<p class="text-gray-600 mb-4">Download business contacts instantly. Import directly into your CRM and start selling – no data cleaning required.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Ready for your CRM</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">3</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-6 h-6">
+										<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+										<path d="M20 3v4"></path>
+										<path d="M22 5h-4"></path>
+										<path d="M4 17v2"></path>
+										<path d="M5 18H3"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Never Miss New Leads</h3>
+									<p class="text-gray-600 mb-4">Set up automated monitoring to catch new businesses in your area. Get enriched leads with AI-powered contact details monthly.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Automated lead generation</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">4</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-16 text-center">
+				<a href="#get_started" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors group">
+					Start Generating Leads
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+					<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
+					</svg>
+				</a>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-extrabold text-gray-900 mb-4">Extract 60+ Business Data Points</h2>
+					<p class="text-xl text-gray-600">Get every detail you need for effective outreach and analysis</p>
+				</div>
+				<div class="relative">
+					<div class="grid md:grid-cols-3 gap-6">
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Basic Info</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Business Name</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Description</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Main Category</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Categories</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Featured Image</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>About</li>
+							</ul>
+						</div>
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Contact Details</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Phone Number</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Email</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Website</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Full Address</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Timezone</li>
+							</ul>
+						</div>
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Business Status</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Rating</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Total Reviews</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Price Range</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Operating Hours</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Currently Open/Closed</li>
+							</ul>
+						</div>
+					</div>
+					<div id="hidden-cards" class="relative transition-all duration-500 max-h-32 opacity-40">
+						<div class="grid md:grid-cols-2 gap-6 mt-6 blur-sm">
+							<div class="bg-gray-50 rounded-xl p-6">
+								<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Marketing Insights</h3>
+								<ul class="space-y-2">
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Running Ads</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Popular Times</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Review Keywords</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Customer Questions</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Competitor Info</li>
+								</ul>
+							</div>
+							<div class="bg-gray-50 rounded-xl p-6">
+								<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Online Presence</h3>
+								<ul class="space-y-2">
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Order Links</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Reservation Links</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Menu</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Social Media</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Featured Reviews</li>
+								</ul>
+							</div>
+						</div>
+						<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white pointer-events-none"></div>
+					</div>
+					<div class="relative">
+						<button id="show-more-btn" class="mt-4 mx-auto flex items-center gap-2 px-6 py-3 rounded-full bg-violet-100 hover:bg-violet-200 transition-all duration-300 text-violet-700 font-medium shadow-sm hover:shadow-md">Show more data points
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4">
+								<path d="m6 9 6 6 6-6"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-base-200 overflow-hidden" id="pricing">
+			<div class="py-24 px-8 max-w-5xl mx-auto">
+				<div class="flex flex-col text-center w-full mb-20">
+					<p class="font-medium text-primary mb-8">Choose Your Plan</p>
+					<h2 class="font-bold text-3xl lg:text-5xl tracking-tight">Stop Wasting Time.<br/><span class="text-primary">Start Closing More Deals.</span></h2>
+					<p class="mt-6 text-xl text-base-content/80 max-w-2xl mx-auto">All plans include unlimited leads per search. No hidden limits. No games. Personal support.</p>
+				</div>
+				<div class="relative flex justify-center flex-col lg:flex-row items-center lg:items-stretch gap-8">
+					<div class="relative w-full max-w-lg">
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Test Drive</p>
+									<p class="text-base-content/80 mt-2">See the power of automated lead generation</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">Free</p>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>3 free searches</strong> with unlimited leads</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Export to CSV/Excel</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Premium support</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>No credit card needed</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Start Free Trial</a>
+							</div>
+						</div>
+					</div>
+					<div class="relative w-full max-w-lg">
+						<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"><span class="badge text-xs text-primary-content font-semibold border-0 bg-primary">MOST POPULAR</span></div>
+						<div class="absolute -inset-[1px] rounded-[9px] bg-primary z-10"></div>
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Standard</p>
+									<p class="text-base-content/80 mt-2">For sales pros who need consistent lead flow</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">$39</p>
+								<div class="flex flex-col justify-end mb-[4px]">
+									<p class="text-sm text-base-content/60 uppercase font-semibold">/mo</p>
+								</div>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>10 searches daily</strong> (300/month) with unlimited leads</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Automated lead monitoring</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Weekly new leads alerts</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Premium support 24/7</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="relative w-full max-w-lg">
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Business</p>
+									<p class="text-base-content/80 mt-2">For teams who need the highest quality data</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">$79</p>
+								<div class="flex flex-col justify-end mb-[4px]">
+									<p class="text-sm text-base-content/60 uppercase font-semibold">/mo</p>
+								</div>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Everything in Standard, plus:</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>20 searches daily</strong> (600/month) with unlimited leads</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>AI-powered data enrichment</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>95%+ verified accuracy</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Advanced contact data</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Enhanced business insights</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Priority 24/7 support</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Upgrade to Business</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-16 text-center">
+					<div class="flex flex-col items-center gap-6">
+						<div class="bg-base-100 rounded-xl p-6 max-w-md">
+							<div class="flex items-center justify-center gap-3 mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+									<path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.75.75 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+								</svg><span class="font-semibold">7-Day Money Back Guarantee</span></div>
+							<p class="text-sm text-base-content/80">Try any plan risk-free. Not happy? Get a full refund within 7 days.</p>
+						</div>
+						<div class="flex flex-wrap justify-center gap-8 text-center">
+							<div>
+								<p class="text-4xl font-bold text-primary">95%+</p>
+								<p class="text-sm text-base-content/60">Data Accuracy</p>
+							</div>
+							<div>
+								<p class="text-4xl font-bold text-primary">24/7</p>
+								<p class="text-sm text-base-content/60">Support</p>
+							</div>
+						</div>
+						<div class="mt-8 italic text-base-content/80 max-w-2xl">&quot;We&#x27;ve tripled our outreach capacity since using ScrapeMyLeads. The automated weekly updates alone save A TON of hours of manual research every month. Now my team have more leads and more sales!&quot;
+							<p class="mt-2 not-italic font-semibold">— Mike Johnson, Sales Director</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-base-200" id="faq">
+			<div class="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+				<div class="flex flex-col text-left basis-1/2">
+					<p class="inline-block font-semibold text-primary mb-4">FAQ</p>
+					<p class="sm:text-4xl text-3xl font-extrabold text-base-content">Frequently Asked Questions</p>
+				</div>
+				<ul class="basis-1/2">
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">How much time can I actually save using Scrapemyleads.com?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">On average, our clients save 4-6 hours per day that they previously spent on manual lead research. What typically takes a whole day of manual Google Maps searching can be done in under 5 minutes with our tool. This means more time for actual selling and client conversations.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">How does the data quality compare to purchased lead lists?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Unlike outdated purchased lists, our data comes directly from Google Maps and business websites in real-time. We use AI verification to ensure 95%+ accuracy for phone numbers and emails. Each lead includes verified business details, active contact information, and additional data points like ratings and reviews to help qualify prospects.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">What makes Scrapemyleads different from other scraping tools?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Three key differences:
+									<ul class="list-disc list-inside pl-4 space-y-1">
+										<li>Full automation - set up once and get weekly updates with new leads</li>
+										<li>Deep data enrichment - we don&#x27;t just scrape Google Maps, we verify and enrich each contact</li>
+										<li>Direct CRM integration - leads go straight to your sales workflow</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Can I target specific industries or locations?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Yes! You can search by any combination of:
+									<ul class="list-disc list-inside pl-4 space-y-1">
+										<li>Industry/business type (e.g., &quot;real estate agents&quot;, &quot;IT companies&quot;)</li>
+										<li>Location (city, state, or specific areas)</li>
+										<li>Business attributes (ratings, review count, etc.)</li>
+									</ul>Results are instantly filterable to match your ideal customer profile.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">How do the weekly lead updates work?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Once you set up a search, our system automatically monitors that area and industry for new businesses. Every week, you&#x27;ll receive an email report with new leads that match your criteria. This ensures you&#x27;re always first to contact new businesses in your target market.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Is this compliant with data protection laws?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Yes, we&#x27;re fully compliant with GDPR and other data protection regulations. We only collect publicly available business information that companies have chosen to share online. Every lead comes with its data source for transparency and compliance.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">What if I&#x27;m not satisfied with the leads quality?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">We offer a 100% satisfaction guarantee. Start with our free trial to verify the lead quality yourself. If you&#x27;re not satisfied, our 24/7 support team will help optimize your searches or provide a full refund within your first 7 days as a paid user.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">How quickly can I start getting leads?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">You can start generating leads within 5 minutes of signing up. Our onboarding process is simple:
+										<ul class="list-disc list-inside pl-4 space-y-1">
+											<li>Enter your target industry and location</li>
+											<li>Select your desired data points</li>
+											<li>Get your first batch of leads almost instantly</li>
+										</ul>No technical setup or training required.</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="relative hero overflow-hidden min-h-screen" id="get_started"><img alt="Sales success visualization" loading="lazy" decoding="async" data-nimg="fill" class="object-cover w-full" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" src="/_next/photo-1497366216548-37526070297c82d6-small.jpg" />
+				<div class="relative hero-overlay bg-gradient-to-t from-neutral to-neutral/70"></div>
+				<div class="relative hero-content text-center text-neutral-content p-8">
+					<div class="flex flex-col items-center max-w-3xl">
+						<div class="bg-neutral/30 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-2xl">
+							<h2 class="font-extrabold text-4xl md:text-6xl tracking-tight mb-8 leading-tight">Stop Manually Searching For Leads.<br/><span class="block mt-4 bg-gradient-to-r from-violet-500 to-violet-300 text-transparent bg-clip-text">Get 100 Verified Contacts Right Now</span></h2>
+							<p class="text-xl text-white/90 mb-12">Let me show you what we can do. I&#x27;ll personally find verified leads from your target market -<span class="text-violet-300 font-semibold"> completely free</span>. Love the quality? We&#x27;ll keep them coming.</p>
+							<div class="max-w-2xl mx-auto">
+								<form class="space-y-5 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mt-8">
+									<div class="text-center mb-6">
+										<p class="text-white/90">Tell me what businesses you need, and I&#x27;ll give you 100 leads</p>
+									</div>
+									<div class="space-y-2">
+										<label for="name" class="block text-sm font-medium text-white/80">Full Name</label>
+										<input required="" type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="John Smith" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="email" class="block text-sm font-medium text-white/80">Business Email</label>
+										<input required="" type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="john@company.com" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="phone" class="block text-sm font-medium text-white/80">Phone Number</label>
+										<input required="" type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="+1 (555) 000-0000" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="targetKeyword" class="block text-sm font-medium text-white/80">Target Businesses</label>
+										<input required="" type="text" id="targetKeyword" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="e.g. Marketing Agencies, Real Estate Agents" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="location" class="block text-sm font-medium text-white/80">Target Location</label>
+										<input required="" type="text" id="location" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="e.g. New York City, All USA" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="role" class="block text-sm font-medium text-white/80">Your Role</label>
+										<input required="" type="text" id="role" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="e.g. Sales Manager, Business Owner" value="" />
+									</div>
+									<div class="grid grid-cols-2 gap-4 pt-2">
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>✅</span><span>100+ verified contacts</span></div>
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>📧</span><span>Emails &amp; phones included</span></div>
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>⚡️</span><span>24h delivery</span></div>
+										<div class="flex items-center gap=2 text-sm text-white/80"><span>🎯</span><span>Exact location match</span></div>
+									</div>
+									<button type="submit" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-medium py-4 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group">Get Your Free Leads Sample
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transform group-hover:translate-x-1 transition-transform">
+											<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"></path>
+										</svg>
+									</button>
+									<p class="text-xs text-center text-white/60">No commitment. Just real, verified leads delivered to your inbox within 24 hours.</p>
+									<p class="text-xs text-center text-white/60">By signing up, you agree to our
+										<!-- --><a href="/tos.html" class="text-violet-300 hover:text-violet-200 underline">Terms</a>
+										<!-- -->and
+										<!-- --><a href="/privacy-policy.html" class="text-violet-300 hover:text-violet-200 underline">Privacy Policy</a></p>
+								</form>
+							</div>
+							<div class="mt-8 pt-8 border-t border-white/10">
+								<div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-white/60">
+									<div class="flex items-center justify-center gap-2"><span>✅</span><span>Verified contacts</span></div>
+									<div class="flex items-center justify-center gap-2"><span>⚡️</span><span>24h delivery</span></div>
+									<div class="flex items-center justify-center gap-2"><span>🔒</span><span>GDPR Compliant</span></div>
+									<div class="flex items-center justify-center gap-2"><span>💯</span><span>95%+ accuracy</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="bg-base-200 border-t border-base-content/10">
+			<div class="max-w-7xl mx-auto px-8 py-24">
+				<div class=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+					<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+						<a aria-current="page" class="flex gap-2 justify-center md:justify-start items-center" href="index.html#"><img alt="ScrapeMyLeads logo" fetchPriority="high" width="24" height="24" decoding="async" data-nimg="1" class="w-6 h-6" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" /><strong class="font-extrabold tracking-tight text-base md:text-lg">ScrapeMyLeads</strong></a>
+						<p class="mt-3 text-sm text-base-content/80">Automated lead generation platform that turns Google Maps searches into verified business contacts. Get names, phones, and emails in minutes, not hours.</p>
+						<p class="mt-3 text-sm text-base-content/60">Copyright ©
+							<!-- -->2026
+							<!-- -->- All rights reserved</p>
+					</div>
+					<div class="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center">
+						<div class="lg:w-1/3 md:w-1/2 w-full px-4">
+							<div class="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">LINKS</div>
+							<!-- <div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm"><a href="/cdn-cgi/l/email-protection.html#bdcec8cdcdd2cfc9fdd0dcd4d193cedecfdccdd8d0c4d1d8dcd9ce93ded2d0" target="_blank" class="link link-hover" aria-label="Contact Support">Support</a><a class="link link-hover" href="index.html#pricing">Pricing</a><a class="link link-hover" href="blog.html">Blog</a></div> -->
+							<div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm"><a href="mailto:support@mail.scrapemyleads.com" target="_blank" class="link link-hover" aria-label="Contact Support">Support</a><a class="link link-hover" href="#pricing">Pricing</a><a class="link link-hover" href="/blog.html">Blog</a></div>
+						</div>
+						<div class="lg:w-1/3 md:w-1/2 w-full px-4">
+							<div class="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">LEGAL</div>
+							<div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm"><a class="link link-hover" href="/tos.html">Terms of services</a><a class="link link-hover" href="/privacy-policy.html">Privacy policy</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const closeMenuButton = document.getElementById('close-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+			
+			if (mobileMenuButton && closeMenuButton && mobileMenu) {
+			mobileMenuButton.addEventListener('click', function() {
+				mobileMenu.classList.remove('hidden');
+			});
+			
+			closeMenuButton.addEventListener('click', function() {
+				mobileMenu.classList.add('hidden');
+			});
+			}
+		});
+		</script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const showMoreBtn = document.getElementById('show-more-btn');
+			const hiddenCards = document.getElementById('hidden-cards');
+			const gradientMask = hiddenCards.querySelector('.bg-gradient-to-t');
+			let isExpanded = false;
+			
+			if (showMoreBtn && hiddenCards) {
+			showMoreBtn.addEventListener('click', function() {
+				if (!isExpanded) {
+				// Раскрываем карточки
+				hiddenCards.classList.remove('max-h-32', 'opacity-40');
+				hiddenCards.classList.add('max-h-full', 'opacity-100');
+				
+				// Убираем размытие
+				const blurredCards = hiddenCards.querySelector('.blur-sm');
+				if (blurredCards) {
+					blurredCards.classList.remove('blur-sm');
+				}
+				
+				// Скрываем градиентную маску
+				if (gradientMask) {
+					gradientMask.classList.add('hidden');
+				}
+				
+				// Меняем текст кнопки и поворачиваем иконку
+				showMoreBtn.innerHTML = 'Show less <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up w-4 h-4"><path d="m18 15-6-6-6 6"/></svg>';
+				
+				isExpanded = true;
+				} else {
+				// Скрываем карточки
+				hiddenCards.classList.remove('max-h-full', 'opacity-100');
+				hiddenCards.classList.add('max-h-32', 'opacity-40');
+				
+				// Возвращаем размытие
+				const cards = hiddenCards.querySelector('.grid');
+				if (cards) {
+					cards.classList.add('blur-sm');
+				}
+				
+				// Показываем градиентную маску
+				if (gradientMask) {
+					gradientMask.classList.remove('hidden');
+				}
+				
+				// Меняем текст кнопки и поворачиваем иконку обратно
+				showMoreBtn.innerHTML = 'Show more data points <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4"><path d="m6 9 6 6 6-6"/></svg>';
+				
+				isExpanded = false;
+				
+				// Прокручиваем к кнопке для удобства
+				showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				}
+			});
+			}
+		});
+		</script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const faqSection = document.getElementById('faq');
+			
+			if (!faqSection) return;
+			
+			const faqButtons = faqSection.querySelectorAll('button[aria-expanded]');
+			
+			// Функция для закрытия всех открытых ответов
+			function closeAllAnswers() {
+				faqButtons.forEach(button => {
+				const isExpanded = button.getAttribute('aria-expanded') === 'true';
+				if (isExpanded) {
+					toggleAnswer(button, false);
+				}
+				});
+			}
+			
+			// Функция для переключения состояния ответа
+			function toggleAnswer(button, forceClose = false) {
+				const isExpanded = button.getAttribute('aria-expanded') === 'true';
+				const shouldExpand = forceClose ? false : !isExpanded;
+				const answer = button.nextElementSibling;
+				const svgRects = button.querySelectorAll('svg rect');
+				
+				// Переключение состояния aria-expanded
+				button.setAttribute('aria-expanded', shouldExpand.toString());
+				
+				// Анимация иконки
+				svgRects.forEach((rect, index) => {
+				if (index === 1) { // Второй прямоугольник (вертикальный)
+					if (shouldExpand) {
+					rect.classList.remove('rotate-90');
+					rect.classList.add('rotate-0');
+					} else {
+					rect.classList.remove('rotate-0');
+					rect.classList.add('rotate-90');
+					}
+				}
+				});
+				
+				// Анимация содержимого
+				if (shouldExpand) {
+				// Открываем
+				answer.style.maxHeight = answer.scrollHeight + 'px';
+				answer.style.opacity = '1';
+				answer.classList.remove('max-h-0', 'opacity-0');
+				answer.classList.add('max-h-[2000px]', 'opacity-100');
+				} else {
+				// Закрываем
+				answer.style.maxHeight = '0';
+				answer.style.opacity = '0';
+				answer.classList.remove('max-h-[2000px]', 'opacity-100');
+				answer.classList.add('max-h-0', 'opacity-0');
+				}
+			}
+			
+			// Обработчик клика по кнопке
+			function handleFaqClick(e) {
+				const button = e.currentTarget;
+				
+				// Опционально: закрыть другие открытые ответы при открытии нового
+				// Раскомментируйте следующую строку, если хотите такое поведение
+				// closeAllAnswers();
+				
+				toggleAnswer(button);
+			}
+			
+			// Добавляем обработчики событий для каждой кнопки
+			faqButtons.forEach(button => {
+				button.addEventListener('click', handleFaqClick);
+				
+				// Инициализируем иконки (все вертикальные линии должны быть повернуты)
+				const svgRects = button.querySelectorAll('svg rect');
+				svgRects.forEach((rect, index) => {
+				if (index === 1) { // Второй прямоугольник
+					rect.classList.add('rotate-90');
+				}
+				});
+			});
+			
+			// Опционально: открыть первый вопрос по умолчанию
+			// faqButtons[0]?.click();
+			});
+		</script>
+
+	</body>
+	
+	</html>
