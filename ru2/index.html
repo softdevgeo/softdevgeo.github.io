@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light" class="__className_d65c78">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charSet="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preload" href="/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" crossorigin="" type="font/woff2" />
+	<link rel="stylesheet" href="/_next/static/css/1ccb63eaaf4b279f.css" data-precedence="next" />
+	<link rel="stylesheet" href="/_next/static/css/48340cfe5c3cfec7.css" data-precedence="next" />
+	<!-- <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-5ZQTRPVZ" as="script" /> -->
+	<meta name="theme-color" content="#7c3aed" />
+	<title>DocFlow Bot - Автоматизированная рассылка документов через Telegram</title>
+	<meta name="description" content="Сервис для бизнеса по генерации и безопасной рассылке персональных комплектов документов через Telegram-бота клиентам и контрагентам." />
+	<meta name="application-name" content="DocFlow Bot" />
+	<meta name="keywords" content="документооборот, Telegram бот, рассылка документов, юридические документы" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:title" content="DocFlow Bot" />
+	<meta property="og:description" content="Сервис для бизнеса по генерации и безопасной рассылке персональных комплектов документов через Telegram-бота клиентам и контрагентам." />
+	<meta property="og:url" content="https://docflowbot.com" />
+	<meta property="og:site_name" content="DocFlow Bot" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="788" />
+	<meta property="og:image" content="https://docflowbot.com/opengraph-image.png?0e3dd4a49af1e23a" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="DocFlow Bot" />
+	<meta name="twitter:description" content="Сервис для бизнеса по генерации и безопасной рассылке персональных комплектов документов через Telegram-бота клиентам и контрагентам." />
+	<meta name="twitter:image:type" content="image/png" />
+	<meta name="twitter:image:width" content="1200" />
+	<meta name="twitter:image:height" content="788" />
+	<meta name="twitter:image" content="https://docflowbot.com/twitter-image.png?0e3dd4a49af1e23a" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+	<link rel="icon" href="/icon8eb7.png?e49f1db3c8d96666" type="image/png" sizes="800x800" />
+	<link rel="apple-touch-icon" href="/apple-icon8eb7.png?e49f1db3c8d96666" type="image/png" sizes="800x800" />
+	<meta name="next-size-adjust" />
+</head>
+<!--$!-->
+<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+<!--/$-->
+
+<body>
+	<!--$!-->
+	<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+	<!--/$-->
+	<style>
+	#nprogress {
+		pointer-events: none
+	}
+	
+	#nprogress .bar {
+		background: #7c3aed;
+		position: fixed;
+		z-index: 1600;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px
+	}
+	
+	#nprogress .peg {
+		display: block;
+		position: absolute;
+		right: 0;
+		width: 100px;
+		height: 100%;
+		box-shadow: 0 0 10px #7c3aed, 0 0 5px #7c3aed;
+		opacity: 1;
+		-webkit-transform: rotate(3deg) translate(0px, -4px);
+		-ms-transform: rotate(3deg) translate(0px, -4px);
+		transform: rotate(3deg) translate(0px, -4px)
+	}
+	
+	#nprogress .spinner {
+		display: block;
+		position: fixed;
+		z-index: 1600;
+		top: 15px;
+		right: 15px
+	}
+	
+	#nprogress .spinner-icon {
+		width: 18px;
+		height: 18px;
+		box-sizing: border-box;
+		border: 2px solid transparent;
+		border-top-color: #7c3aed;
+		border-left-color: #7c3aed;
+		border-radius: 50%;
+		-webkit-animation: nprogress-spinner 400ms linear infinite;
+		animation: nprogress-spinner 400ms linear infinite
+	}
+	
+	.nprogress-custom-parent {
+		overflow: hidden;
+		position: relative
+	}
+	
+	.nprogress-custom-parent #nprogress .bar,
+	.nprogress-custom-parent #nprogress .spinner {
+		position: absolute
+	}
+	
+	@-webkit-keyframes nprogress-spinner {
+		0% {
+			-webkit-transform: rotate(0deg)
+		}
+		100% {
+			-webkit-transform: rotate(360deg)
+		}
+	}
+	
+	@keyframes nprogress-spinner {
+		0% {
+			transform: rotate(0deg)
+		}
+		100% {
+			transform: rotate(360deg)
+		}
+	}
+	</style>
+	<!--$!-->
+	<template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template>
+	<!--/$-->
+
+	<header class="bg-base-200">
+	<nav class="container flex items-center justify-between px-8 py-4 mx-auto" aria-label="Global">
+		<div class="flex lg:flex-1">
+		<a class="flex items-center gap-2 shrink-0" href="/" title="DocFlow Bot homepage">
+			<img alt="DocFlow Bot logo" fetchPriority="high" width="32" height="32" decoding="async" data-nimg="1" class="w-8" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" />
+			<span class="font-extrabold text-lg">DocFlow Bot</span>
+		</a>
+		</div>
+		<div class="flex lg:hidden">
+		<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5" id="mobile-menu-button">
+			<span class="sr-only">Открыть меню</span>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base-content">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+			</svg>
+		</button>
+		</div>
+		<div class="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
+		<a href="#features" class="link link-hover" title="Возможности">Возможности</a>
+		<a href="#pricing" class="link link-hover" title="Тарифы">Тарифы</a>
+		<a href="#faq" class="link link-hover" title="FAQ">FAQ</a>
+		</div>
+	</nav>
+	
+	<!-- Mobile menu -->
+	<div class="relative z-50 hidden" id="mobile-menu">
+		<div class="fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right">
+		<div class="flex items-center justify-between">
+			<a class="flex items-center gap-2 shrink-0" title="DocFlow Bot homepage" href="/">
+			<img alt="DocFlow Bot logo" fetchPriority="high" width="32" height="32" decoding="async" data-nimg="1" class="w-8" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" />
+			<span class="font-extrabold text-lg">DocFlow Bot</span>
+			</a>
+			<button type="button" class="-m-2.5 rounded-md p-2.5" id="close-menu-button">
+			<span class="sr-only">Закрыть меню</span>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+			</button>
+		</div>
+		<div class="flow-root mt-6">
+			<div class="py-4">
+			<div class="flex flex-col gap-y-4 items-start">
+				<a href="#features" class="link link-hover" title="Возможности">Возможности</a>
+				<a href="#pricing" class="link link-hover" title="Тарифы">Тарифы</a>
+				<a href="#faq" class="link link-hover" title="FAQ">FAQ</a>
+			</div>
+			</div>
+			<div class="divider"></div>
+		</div>
+		</div>
+	</div>
+	</header>
+
+	<main>
+		<section class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-8 lg:py-20">
+			<div class="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start lg:w-[60%]">
+				<h1 class="font-extrabold text-3xl lg:text-6xl tracking-tight">DocFlow Bot:<span class="block mt-2 text-[#6D28D9]">Автоматизированная рассылка документов через Telegram</span></h1>
+				<div class="space-y-6">
+					<p class="text-xl leading-relaxed"><span class="font-bold">Документооборот для бизнеса — созданный для компаний, которые ценят время и безопасность.</span></p>
+					<p class="text-xl leading-relaxed">Больше никаких email-рассылок и ручной отправки. Умная генерация и безопасная доставка документов.</p>
+					<p class="text-xl leading-relaxed text-gray-700">Формируйте персонализированные комплекты документов для клиентов, партнёров и контрагентов, а наши Telegram-боты <span class="text-[#6D28D9] font-semibold">автоматически доставляют</span> их каждому получателю.</p>
+					<p class="text-xl leading-relaxed text-gray-700">Безопасный доступ по ссылке, отслеживание скачиваний, интеграция с вашими системами — <span class="text-[#6D28D9] font-semibold">на 80% быстрее, чем ручная рассылка.</span></p>
+				</div>
+
+				<div class="flex flex-col gap-4 w-full max-w-md">
+					<a href="#get_started" class="btn bg-violet-600 hover:bg-violet-700 text-white font-medium px-8 w-full flex items-center justify-center">
+						Попробовать бесплатно
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ml-2">
+						<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 13.608a.75.75 0 111.04 1.08l5.5-5.25a.75.75 0 000-1.08l-5.5-5.25a.75.75 0 11-1.04 1.08l4.158 3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
+						</svg>
+					</a>
+				</div>
+
+				<div class="flex flex-col gap-6">
+					<div class="flex items-center gap-4">
+						<div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-3">
+							<div class="-space-x-5 avatar-group justy-start">
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1534528741775-53994a69daebedf8.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1517841905240-472988babdf909b6.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1539571696357-5a69c17a67c62c8b.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1507003211169-0a1dd7228f2ddb07.jpg" /></div>
+								<div class="avatar w-12 h-12"><img alt="User" fetchPriority="high" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent" src="/_next/photo-1488161628813-04466f872be2113b.jpg" /></div>
+							</div>
+							<div class="flex flex-col justify-center items-center md:items-start gap-1">
+								<div class="rating">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500">
+										<path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"></path>
+									</svg>
+								</div>
+								<div class="text-base text-base-content/80"><span class="font-semibold  text-base-content">5000+</span> документов отправлено ежемесячно</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lg:w-[55%] w-full max-w-3xl">
+				<div class="relative bg-base-100 rounded-xl shadow-2xl overflow-hidden">
+					<div class="bg-white/90 backdrop-blur-md border-b border-gray-100">
+						<div class="flex items-center justify-between px-4 py-3">
+							<div class="flex space-x-2">
+								<div class="w-3 h-3 bg-[#FF5F57] rounded-full"></div>
+								<div class="w-3 h-3 bg-[#FFBD2E] rounded-full"></div>
+								<div class="w-3 h-3 bg-[#28C840] rounded-full"></div>
+							</div>
+							<div class="flex-1 max-w-md mx-4 hidden sm:block">
+								<div class="flex items-center bg-gray-100/80 rounded-lg px-3 py-1.5">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-gray-400 mr-2">
+										<path fill-rule="evenodd" d="M9.493 2.853a.75.75 0 00-1.486-.205L7.545 6H4.198a.75.75 0 000 1.5h3.14l-.69 5H3.302a.75.75 0 000 1.5h3.14l-.435 3.148a.75.75 0 001.486.205L7.955 14h2.986l-.434 3.148a.75.75 0 001.486.205L12.456 14h3.346a.75.75 0 000-1.5h-3.14l.69-5h3.346a.75.75 0 000-1.5h-3.14l.435-3.147a.75.75 0 00-1.486-.205L12.045 6H9.059l.434-3.147zM8.852 7.5l-.69 5h2.986l.69-5H8.852z" clip-rule="evenodd"></path>
+									</svg><span class="text-sm text-gray-600 font-medium">app.docflowbot.com</span><span class="text-sm text-gray-400">/dashboard</span></div>
+							</div>
+							<div class="w-14 hidden sm:block"></div>
+						</div>
+					</div>
+					<!-- картинка/скриншот -->
+				</div>
+			</div>
+		</section>
+		<section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h2 class="font-extrabold text-4xl md:text-5xl text-gray-900 mb-6">Ваш поиск решения для документооборота<span class="block mt-2 text-violet-600">Заканчивается здесь</span></h2>
+					<p class="text-xl text-gray-600 leading-relaxed">Прекратите тратить время на ручную рассылку документов. Получайте автоматическую генерацию и безопасную доставку персональных комплектов документов через Telegram.</p>
+				</div>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div class="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+						<div class="flex items-start gap-4 mb-6">
+							<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-6 h-6">
+									<circle cx="12" cy="12" r="10"></circle>
+									<circle cx="12" cy="12" r="6"></circle>
+									<circle cx="12" cy="12" r="2"></circle>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-2">Безопасная доставка документов</h3>
+								<div class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Больше никаких потерь документов в email и спаме</div>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">Забудьте о рисках email-рассылки. Telegram-боты доставляют документы напрямую получателям с защитой паролем и отслеживанием доступа.</p>
+						<ul class="space-y-3">
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Защищённые ссылки с доступом по паролю</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Отслеживание скачиваний и просмотров</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Шифрование данных и безопасное хранение</span></li>
+						</ul>
+					</div>
+					<div class="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+						<div class="flex items-start gap-4 mb-6">
+							<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line w-6 h-6">
+									<path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+									<path d="m19 9-5 5-4-4-3 3"></path>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-2">Автоматизация рутины</h3>
+								<div class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Сократите время на работу с документами на 80%</div>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">Пока другие вручную формируют и отправляют документы, ваш бот автоматически генерирует персонализированные комплекты и рассылает их сотням получателей.</p>
+						<ul class="space-y-3">
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Массовая генерация по списку контрагентов</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Интеграция с Excel, Google Sheets, 1С</span></li>
+							<li class="flex items-center gap-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-violet-600 flex-shrink-0">
+									<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+								</svg><span class="text-gray-600">Шаблоны документов с подстановкой данных</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-16 bg-violet-50 rounded-2xl p-8 text-center">
+					<p class="text-xl text-violet-900 font-medium mb-4">"Раньше мы тратили 3+ часа в день на рассылку договоров клиентам. Теперь бот делает это за 10 минут, а клиенты получают документы мгновенно."</p>
+					<p class="text-violet-700">- Анна К., руководитель юридического отдела</p>
+				</div>
+			</div>
+		</section>
+		<section class="relative overflow-hidden" id="features">
+			<div class="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-transparent to-gray-50"></div>
+			<div class="bg-gray-50 py-24 relative">
+				<div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="text-center max-w-3xl mx-auto mb-20">
+						<h2 class="font-extrabold text-gray-900 text-4xl md:text-5xl mb-6">Всё, что нужно для<span class="block mt-2 text-violet-600">Эффективного Документооборота</span></h2>
+						<p class="text-xl text-gray-600 leading-relaxed">Прекратите тратить время на ручную работу. Получайте автоматическую генерацию и безопасную доставку документов.</p>
+					</div>
+					<div class="grid lg:grid-cols-2 gap-8">
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dot w-8 h-8">
+										<circle cx="12" cy="12" r="10"></circle>
+										<circle cx="12" cy="12" r="1"></circle>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Простота использования</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Никаких технических знаний не требуется. Загрузите список получателей и шаблоны документов — система сделает всё остальное.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Интуитивно понятный интерфейс</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Не требуется программирование</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Начало работы за 5 минут</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-8 h-8">
+										<circle cx="12" cy="12" r="10"></circle>
+										<polyline points="12 6 12 12 16 14"></polyline>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Экономия времени</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Прекратите ручную рассылку документов. Наша система автоматизирует процесс, давая вам больше времени для важных задач.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Сокращение времени на 80%</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Одновременная рассылка сотням получателей</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Автоматическое ведение логов</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-8 h-8">
+										<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+										<path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+										<path d="M3 12A9 3 0 0 0 21 12"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Полный контроль</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Отслеживайте каждый документ: кто получил, когда скачал, сколько раз открывал. Полная прозрачность документооборота.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Детальная статистика доставки</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Уведомления о скачиваниях</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Экспорт отчетов в PDF и Excel</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="relative group rounded-2xl bg-white border border-gray-200 hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+							<div class="p-8">
+								<div class="inline-flex p-3 rounded-lg bg-violet-50 text-violet-600 group-hover:bg-violet-100 group-hover:text-violet-700 transition-all duration-300 mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-spreadsheet w-8 h-8">
+										<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+										<path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+										<path d="M8 13h2"></path>
+										<path d="M14 13h2"></path>
+										<path d="M8 17h2"></path>
+										<path d="M14 17h2"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-violet-700 transition-colors">Интеграции</h3>
+									<p class="text-gray-600 leading-relaxed text-base mb-8">Подключайтесь к вашим CRM, бухгалтерским программам и другим системам. Импортируйте данные автоматически.</p>
+									<ul class="space-y-4">
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">API для разработчиков</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Интеграция с 1С, amoCRM, Битрикс24</span></li>
+										<li class="flex items-start gap-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-0.5 text-violet-600 flex-shrink-0">
+												<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path>
+											</svg><span class="text-gray-600 text-base">Импорт из Excel и Google Sheets</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-transparent to-gray-50"></div>
+		</section>
+		<section class="py-24 bg-white relative">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h2 class="font-extrabold text-gray-900 text-4xl md:text-5xl mb-6">Как это работает<span class="block mt-2 text-violet-600">Просто как 1-2-3-4</span></h2>
+					<p class="text-xl text-gray-600 leading-relaxed">От загрузки данных до доставки документов — за считанные минуты</p>
+				</div>
+				<div class="relative">
+					<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 transform -translate-y-1/2"></div>
+					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload w-6 h-6">
+										<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+										<polyline points="17 8 12 3 7 8"></polyline>
+										<line x1="12" x2="12" y1="3" y2="15"></line>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Загрузите данные</h3>
+									<p class="text-gray-600 mb-4">Загрузите список получателей и шаблоны документов. Поддерживаются Excel, CSV и Google Sheets.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Импорт за 2 минуты</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">1</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-6 h-6">
+										<path d="M12 8V4H8"></path>
+										<rect width="16" height="12" x="4" y="8" rx="2"></rect>
+										<path d="M2 14h2"></path>
+										<path d="M20 14h2"></path>
+										<path d="M15 13v2"></path>
+										<path d="M9 13v2"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Настройте Telegram-бота</h3>
+									<p class="text-gray-600 mb-4">Создайте своего бота или используйте нашего. Настройте приветственное сообщение и права доступа.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Без программирования</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">2</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send w-6 h-6">
+										<path d="m22 2-7 20-4-9-9-4Z"></path>
+										<path d="M22 2 11 13"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Автоматическая рассылка</h3>
+									<p class="text-gray-600 mb-4">Система сгенерирует персонализированные документы для каждого получателя и отправит через бота.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Мгновенная доставка</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">3</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-violet-200 transition-all duration-300 shadow-sm hover:shadow-md">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-50 text-violet-600 mb-6 group-hover:bg-violet-100 transition-colors">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart w-6 h-6">
+										<line x1="12" x2="12" y1="20" y2="10"></line>
+										<line x1="18" x2="18" y1="20" y2="4"></line>
+										<line x1="6" x2="6" y1="20" y2="16"></line>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Отслеживайте результаты</h3>
+									<p class="text-gray-600 mb-4">Смотрите статистику: кто получил документы, когда скачал, какие документы просмотрены.</p><span class="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm text-violet-700">Полная прозрачность</span></div>
+								<div class="absolute -top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-violet-600 text-white font-bold text-sm">4</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-16 text-center">
+				<a href="#get_started" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors group">
+					Начать пользоваться
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+					<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
+					</svg>
+				</a>
+				</div>
+			</div>
+		</section>
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-extrabold text-gray-900 mb-4">Подходит для любых типов документов</h2>
+					<p class="text-xl text-gray-600">От договоров до отчетов — автоматизируйте любые бизнес-процессы</p>
+				</div>
+				<div class="relative">
+					<div class="grid md:grid-cols-3 gap-6">
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Юридические документы</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Договоры и соглашения</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Акты выполненных работ</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Доверенности</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Исковые заявления</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Консультационные заключения</li>
+							</ul>
+						</div>
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Финансовые документы</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Счета и инвойсы</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Акты сверок</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Налоговые декларации</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Финансовые отчеты</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Отчеты для инвесторов</li>
+							</ul>
+						</div>
+						<div class="bg-gray-50 rounded-xl p-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Бизнес-документы</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Коммерческие предложения</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Спецификации и сметы</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Отчеты по проектам</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Документы для тендеров</li>
+								<li class="text-gray-600 flex items-center gap-2">
+									<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Франшизные договоры</li>
+							</ul>
+						</div>
+					</div>
+					<div id="hidden-cards" class="relative transition-all duration-500 max-h-32 opacity-40">
+						<div class="grid md:grid-cols-2 gap-6 mt-6 blur-sm">
+							<div class="bg-gray-50 rounded-xl p-6">
+								<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Медицинские документы</h3>
+								<ul class="space-y-2">
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Договоры на услуги</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Информированные согласия</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Результаты анализов</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Медицинские заключения</li>
+								</ul>
+							</div>
+							<div class="bg-gray-50 rounded-xl p-6">
+								<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-violet-600"><path d="M20 6 9 17l-5-5"></path></svg>Образовательные документы</h3>
+								<ul class="space-y-2">
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Договоры с родителями</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Учебные материалы</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Сертификаты и дипломы</li>
+									<li class="text-gray-600 flex items-center gap-2">
+										<div class="w-1.5 h-1.5 rounded-full bg-violet-600"></div>Отчеты об успеваемости</li>
+								</ul>
+							</div>
+						</div>
+						<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white pointer-events-none"></div>
+					</div>
+					<div class="relative">
+						<button id="show-more-btn" class="mt-4 mx-auto flex items-center gap-2 px-6 py-3 rounded-full bg-violet-100 hover:bg-violet-200 transition-all duration-300 text-violet-700 font-medium shadow-sm hover:shadow-md">Показать больше типов документов
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4">
+								<path d="m6 9 6 6 6-6"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-base-200 overflow-hidden" id="pricing">
+			<div class="py-24 px-8 max-w-5xl mx-auto">
+				<div class="flex flex-col text-center w-full mb-20">
+					<p class="font-medium text-primary mb-8">Выберите свой план</p>
+					<h2 class="font-bold text-3xl lg:text-5xl tracking-tight">Прекратите Тратить Время.<br/><span class="text-primary">Начните Эффективный Документооборот.</span></h2>
+					<p class="mt-6 text-xl text-base-content/80 max-w-2xl mx-auto">Все планы включают неограниченное количество получателей. Никаких скрытых лимитов. Персональная поддержка.</p>
+				</div>
+				<div class="relative flex justify-center flex-col lg:flex-row items-center lg:items-stretch gap-8">
+					<div class="relative w-full max-w-lg">
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Тестовый период</p>
+									<p class="text-base-content/80 mt-2">Оцените возможности автоматической рассылки</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">Бесплатно</p>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>3 бесплатные рассылки</strong> до 50 получателей каждая</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Базовые шаблоны документов</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Поддержка по email</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Без кредитной карты</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Начать бесплатно</a>
+							</div>
+						</div>
+					</div>
+					<div class="relative w-full max-w-lg">
+						<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"><span class="badge text-xs text-primary-content font-semibold border-0 bg-primary">САМЫЙ ПОПУЛЯРНЫЙ</span></div>
+						<div class="absolute -inset-[1px] rounded-[9px] bg-primary z-10"></div>
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Стандарт</p>
+									<p class="text-base-content/80 mt-2">Для малого и среднего бизнеса</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">4 990 ₽</p>
+								<div class="flex flex-col justify-end mb-[4px]">
+									<p class="text-sm text-base-content/60 uppercase font-semibold">/месяц</p>
+								</div>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>До 500 получателей</strong> в месяц</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Неограниченное количество шаблонов</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Расширенная статистика</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Приоритетная поддержка</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Выбрать тариф</a>
+							</div>
+						</div>
+					</div>
+					<div class="relative w-full max-w-lg">
+						<div class="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+							<div class="flex justify-between items-center gap-4">
+								<div>
+									<p class="text-lg lg:text-xl font-bold">Бизнес</p>
+									<p class="text-base-content/80 mt-2">Для крупных компаний и команд</p>
+								</div>
+							</div>
+							<div class="flex gap-2">
+								<p class="text-5xl tracking-tight font-extrabold">14 990 ₽</p>
+								<div class="flex flex-col justify-end mb-[4px]">
+									<p class="text-sm text-base-content/60 uppercase font-semibold">/месяц</p>
+								</div>
+							</div>
+							<ul class="space-y-2.5 leading-relaxed text-base flex-1">
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Всё из тарифа Стандарт, плюс:</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Неограниченное количество получателей</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>Интеграции с 1С, CRM, ERP</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span><strong>White-label боты под ваш бренд</strong></span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Расширенная аналитика и отчеты</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Индивидуальные разработки</span></li>
+								<li class="flex items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-[18px] h-[18px] text-primary shrink-0">
+										<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path>
+									</svg><span>Персональный менеджер 24/7</span></li>
+							</ul>
+							<div class="space-y-2">
+								<a href="#get_started" class="btn btn-primary btn-block">Выбрать бизнес-тариф</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-16 text-center">
+					<div class="flex flex-col items-center gap-6">
+						<div class="bg-base-100 rounded-xl p-6 max-w-md">
+							<div class="flex items-center justify-center gap-3 mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
+									<path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.75.75 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+								</svg><span class="font-semibold">14-Дневная Гарантия Возврата</span></div>
+							<p class="text-sm text-base-content/80">Попробуйте любой тариф без риска. Не понравится? Вернем деньги в течение 14 дней.</p>
+						</div>
+						<div class="flex flex-wrap justify-center gap-8 text-center">
+							<div>
+								<p class="text-4xl font-bold text-primary">100%</p>
+								<p class="text-sm text-base-content/60">Безопасность данных</p>
+							</div>
+							<div>
+								<p class="text-4xl font-bold text-primary">24/7</p>
+								<p class="text-sm text-base-content/60">Поддержка</p>
+							</div>
+						</div>
+						<div class="mt-8 italic text-base-content/80 max-w-2xl">"Мы сократили время на рассылку договоров с 8 часов до 20 минут. Юридический отдел теперь фокусируется на важных задачах, а не на рутине. Клиенты получают документы мгновенно и в безопасности."
+							<p class="mt-2 not-italic font-semibold">— Михаил С., директор юридической фирмы</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-base-200" id="faq">
+			<div class="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+				<div class="flex flex-col text-left basis-1/2">
+					<p class="inline-block font-semibold text-primary mb-4">FAQ</p>
+					<p class="sm:text-4xl text-3xl font-extrabold text-base-content">Часто задаваемые вопросы</p>
+				</div>
+				<ul class="basis-1/2">
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Сколько времени я могу сэкономить с DocFlow Bot?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">В среднем наши клиенты экономят 4-8 часов в неделю, которые раньше тратили на ручную рассылку документов. То, что занимало целый день ручной работы, теперь делается за 10-15 минут. Это время можно посвятить более важным бизнес-задачам.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Насколько безопасна доставка документов через Telegram?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Мы используем сквозное шифрование, защищенные ссылки с доступом по паролю и двухфакторную аутентификацию. Все документы хранятся в зашифрованном виде, а доступ логируется. Telegram обеспечивает безопасный канал доставки, что намного надежнее email.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Чем DocFlow Bot лучше email-рассылки?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Три ключевых преимущества:
+									<ul class="list-disc list-inside pl-4 space-y-1">
+										<li>100% доставка — документы не попадают в спам и не теряются</li>
+										<li>Мгновенные уведомления о получении и скачивании</li>
+										<li>Высокая безопасность и конфиденциальность</li>
+										<li>Удобный доступ с мобильных устройств</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Можно ли интегрировать с нашей CRM или 1С?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+						</button>
+						<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+							<div class="pb-5 leading-relaxed">
+								<div class="space-y-2 leading-relaxed">Да! Мы поддерживаем интеграции с:
+									<ul class="list-disc list-inside pl-4 space-y-1">
+										<li>1С:Бухгалтерия, 1С:Управление торговлей</li>
+										<li>amoCRM, Битрикс24, Мегаплан</li>
+										<li>Google Sheets, Excel, CSV-файлы</li>
+										<li>REST API для кастомных интеграций</li>
+									</ul>Данные о контрагентах и шаблоны документов могут подтягиваться автоматически.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Нужны ли получателям устанавливать Telegram?</span>
+							<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+								<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+							</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Да, получателям нужен Telegram для получения документов. Однако это преимущество: Telegram установлен у 800+ миллионов пользователей, имеет веб-версию и работает на любых устройствах. Большинство ваших клиентов и партнеров уже им пользуются.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Соответствует ли сервис требованиям 152-ФЗ и GDPR?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Да, мы полностью соответствуем требованиям 152-ФЗ о персональных данных и GDPR. Все данные шифруются, доступ логируется, а хранение происходит на защищенных серверах на территории РФ. Мы предоставляем необходимые документы для compliance-проверок.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Что если получатель не скачал документы?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Система автоматически отслеживает статус доставки. Если получатель не скачал документы в течение 3 дней, вы получите уведомление. Можно отправить напоминание через бота или альтернативным способом. Все попытки доступа логируются.</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false"><span class="flex-1 text-base-content ">Как быстро можно начать работу?</span>
+								<svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+									<rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+								</svg>
+							</button>
+							<div class="transition-all duration-300 ease-in-out opacity-80 overflow-hidden" style="max-height:0;opacity:0">
+								<div class="pb-5 leading-relaxed">
+									<div class="space-y-2 leading-relaxed">Вы можете начать отправку документов уже через 10 минут после регистрации:
+										<ul class="list-disc list-inside pl-4 space-y-1">
+											<li>Создайте Telegram-бота (инструкция за 2 минуты)</li>
+											<li>Загрузите шаблон документа</li>
+											<li>Импортируйте список получателей из Excel</li>
+											<li>Запустите рассылку</li>
+										</ul>Техническая настройка не требуется.</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="relative hero overflow-hidden min-h-screen" id="get_started"><img alt="Визуализация документооборота" loading="lazy" decoding="async" data-nimg="fill" class="object-cover w-full" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" src="/_next/photo-1497366216548-37526070297c82d6-small.jpg" />
+				<div class="relative hero-overlay bg-gradient-to-t from-neutral to-neutral/70"></div>
+				<div class="relative hero-content text-center text-neutral-content p-8">
+					<div class="flex flex-col items-center max-w-3xl">
+						<div class="bg-neutral/30 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-2xl">
+							<h2 class="font-extrabold text-4xl md:text-6xl tracking-tight mb-8 leading-tight">Прекратите Ручную Рассылку Документов.<br/><span class="block mt-4 bg-gradient-to-r from-violet-500 to-violet-300 text-transparent bg-clip-text">Отправьте 50 Документов Прямо Сейчас</span></h2>
+							<p class="text-xl text-white/90 mb-12">Покажу вам, как это работает. Найду для вас клиентов из вашей ниши — <span class="text-violet-300 font-semibold"> совершенно бесплатно</span>. Понравится качество? Будем работать дальше.</p>
+							<div class="max-w-2xl mx-auto">
+								<form class="space-y-5 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mt-8">
+									<div class="text-center mb-6">
+										<p class="text-white/90">Расскажите, какие документы вы рассылаете, и мы настроим демо</p>
+									</div>
+									<div class="space-y-2">
+										<label for="name" class="block text-sm font-medium text-white/80">ФИО</label>
+										<input required="" type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="Иванов Иван Иванович" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="email" class="block text-sm font-medium text-white/80">Рабочий Email</label>
+										<input required="" type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="ivan@company.com" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="phone" class="block text-sm font-medium text-white/80">Номер телефона</label>
+										<input required="" type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="+7 (999) 123-45-67" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="company" class="block text-sm font-medium text-white/80">Название компании</label>
+										<input required="" type="text" id="company" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all" placeholder="ООО 'Ваша компания'" value="" />
+									</div>
+									<div class="space-y-2">
+										<label for="documents" class="block text-sm font-medium text-white/80">Какие документы вы рассылаете?</label>
+										<select id="documents" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all">
+											<option value="" disabled selected>Выберите тип документов</option>
+											<option value="legal">Юридические документы (договоры, акты)</option>
+											<option value="financial">Финансовые документы (счета, отчеты)</option>
+											<option value="commercial">Коммерческие предложения</option>
+											<option value="medical">Медицинские документы</option>
+											<option value="other">Другие документы</option>
+										</select>
+									</div>
+									<div class="space-y-2">
+										<label for="recipients" class="block text-sm font-medium text-white/80">Сколько получателей в месяц?</label>
+										<select id="recipients" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500 transition-all">
+											<option value="" disabled selected>Выберите количество</option>
+											<option value="1-50">До 50 получателей</option>
+											<option value="51-200">50-200 получателей</option>
+											<option value="201-500">200-500 получателей</option>
+											<option value="501+">Более 500 получателей</option>
+										</select>
+									</div>
+									<div class="grid grid-cols-2 gap-4 pt-2">
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>✅</span><span>Бесплатная настройка</span></div>
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>📧</span><span>Демо за 24 часа</span></div>
+										<div class="flex items-center gap-2 text-sm text-white/80"><span>⚡️</span><span>Начало за 10 минут</span></div>
+										<div class="flex items-center gap=2 text-sm text-white/80"><span>🎯</span><span>Персональный подход</span></div>
+									</div>
+									<button type="submit" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-medium py-4 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group">Получить бесплатную демо-версию
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transform group-hover:translate-x-1 transition-transform">
+											<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"></path>
+										</svg>
+									</button>
+									<p class="text-xs text-center text-white/60">Без обязательств. Просто реальная демонстрация работы системы в течение 24 часов.</p>
+									<p class="text-xs text-center text-white/60">Отправляя заявку, вы соглашаетесь с
+										<!-- --><a href="/tos.html" class="text-violet-300 hover:text-violet-200 underline">Условиями использования</a>
+										<!-- -->и
+										<!-- --><a href="/privacy-policy.html" class="text-violet-300 hover:text-violet-200 underline">Политикой конфиденциальности</a></p>
+								</form>
+							</div>
+							<div class="mt-8 pt-8 border-t border-white/10">
+								<div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-white/60">
+									<div class="flex items-center justify-center gap-2"><span>✅</span><span>Безопасная доставка</span></div>
+									<div class="flex items-center justify-center gap-2"><span>⚡️</span><span>Мгновенные уведомления</span></div>
+									<div class="flex items-center justify-center gap-2"><span>🔒</span><span>Соответствие 152-ФЗ</span></div>
+									<div class="flex items-center justify-center gap-2"><span>💯</span><span>100% отслеживание</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="bg-base-200 border-t border-base-content/10">
+			<div class="max-w-7xl mx-auto px-8 py-24">
+				<div class=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+					<div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+						<a aria-current="page" class="flex gap-2 justify-center md:justify-start items-center" href="index.html#"><img alt="DocFlow Bot logo" fetchPriority="high" width="24" height="24" decoding="async" data-nimg="1" class="w-6 h-6" style="color:transparent" src="/_next/static/media/icon.e49f1db3.png" /><strong class="font-extrabold tracking-tight text-base md:text-lg">DocFlow Bot</strong></a>
+						<p class="mt-3 text-sm text-base-content/80">Сервис для бизнеса по генерации и безопасной рассылке персональных комплектов документов через Telegram-бота клиентам и контрагентам.</p>
+						<p class="mt-3 text-sm text-base-content/60">©
+							<!-- -->2026
+							<!-- -->- Все права защищены</p>
+					</div>
+					<div class="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center">
+						<div class="lg:w-1/3 md:w-1/2 w-full px-4">
+							<div class="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">ССЫЛКИ</div>
+							<div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm"><a href="mailto:support@docflowbot.com" target="_blank" class="link link-hover" aria-label="Contact Support">Поддержка</a><a class="link link-hover" href="#pricing">Тарифы</a><a class="link link-hover" href="/blog.html">Блог</a></div>
+						</div>
+						<div class="lg:w-1/3 md:w-1/2 w-full px-4">
+							<div class="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">ПРАВОВАЯ ИНФОРМАЦИЯ</div>
+							<div class="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm"><a class="link link-hover" href="/tos.html">Условия использования</a><a class="link link-hover" href="/privacy-policy.html">Политика конфиденциальности</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const closeMenuButton = document.getElementById('close-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+			
+			if (mobileMenuButton && closeMenuButton && mobileMenu) {
+			mobileMenuButton.addEventListener('click', function() {
+				mobileMenu.classList.remove('hidden');
+			});
+			
+			closeMenuButton.addEventListener('click', function() {
+				mobileMenu.classList.add('hidden');
+			});
+			}
+		});
+		</script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const showMoreBtn = document.getElementById('show-more-btn');
+			const hiddenCards = document.getElementById('hidden-cards');
+			const gradientMask = hiddenCards.querySelector('.bg-gradient-to-t');
+			let isExpanded = false;
+			
+			if (showMoreBtn && hiddenCards) {
+			showMoreBtn.addEventListener('click', function() {
+				if (!isExpanded) {
+				// Раскрываем карточки
+				hiddenCards.classList.remove('max-h-32', 'opacity-40');
+				hiddenCards.classList.add('max-h-full', 'opacity-100');
+				
+				// Убираем размытие
+				const blurredCards = hiddenCards.querySelector('.blur-sm');
+				if (blurredCards) {
+					blurredCards.classList.remove('blur-sm');
+				}
+				
+				// Скрываем градиентную маску
+				if (gradientMask) {
+					gradientMask.classList.add('hidden');
+				}
+				
+				// Меняем текст кнопки и поворачиваем иконку
+				showMoreBtn.innerHTML = 'Показать меньше <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up w-4 h-4"><path d="m18 15-6-6-6 6"/></svg>';
+				
+				isExpanded = true;
+				} else {
+				// Скрываем карточки
+				hiddenCards.classList.remove('max-h-full', 'opacity-100');
+				hiddenCards.classList.add('max-h-32', 'opacity-40');
+				
+				// Возвращаем размытие
+				const cards = hiddenCards.querySelector('.grid');
+				if (cards) {
+					cards.classList.add('blur-sm');
+				}
+				
+				// Показываем градиентную маску
+				if (gradientMask) {
+					gradientMask.classList.remove('hidden');
+				}
+				
+				// Меняем текст кнопки и поворачиваем иконку обратно
+				showMoreBtn.innerHTML = 'Показать больше типов документов <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4"><path d="m6 9 6 6 6-6"/></svg>';
+				
+				isExpanded = false;
+				
+				// Прокручиваем к кнопке для удобства
+				showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				}
+			});
+			}
+		});
+		</script>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const faqSection = document.getElementById('faq');
+			
+			if (!faqSection) return;
+			
+			const faqButtons = faqSection.querySelectorAll('button[aria-expanded]');
+			
+			// Функция для закрытия всех открытых ответов
+			function closeAllAnswers() {
+				faqButtons.forEach(button => {
+				const isExpanded = button.getAttribute('aria-expanded') === 'true';
+				if (isExpanded) {
+					toggleAnswer(button, false);
+				}
+				});
+			}
+			
+			// Функция для переключения состояния ответа
+			function toggleAnswer(button, forceClose = false) {
+				const isExpanded = button.getAttribute('aria-expanded') === 'true';
+				const shouldExpand = forceClose ? false : !isExpanded;
+				const answer = button.nextElementSibling;
+				const svgRects = button.querySelectorAll('svg rect');
+				
+				// Переключение состояния aria-expanded
+				button.setAttribute('aria-expanded', shouldExpand.toString());
+				
+				// Анимация иконки
+				svgRects.forEach((rect, index) => {
+				if (index === 1) { // Второй прямоугольник (вертикальный)
+					if (shouldExpand) {
+					rect.classList.remove('rotate-90');
+					rect.classList.add('rotate-0');
+					} else {
+					rect.classList.remove('rotate-0');
+					rect.classList.add('rotate-90');
+					}
+				}
+				});
+				
+				// Анимация содержимого
+				if (shouldExpand) {
+				// Открываем
+				answer.style.maxHeight = answer.scrollHeight + 'px';
+				answer.style.opacity = '1';
+				answer.classList.remove('max-h-0', 'opacity-0');
+				answer.classList.add('max-h-[2000px]', 'opacity-100');
+				} else {
+				// Закрываем
+				answer.style.maxHeight = '0';
+				answer.style.opacity = '0';
+				answer.classList.remove('max-h-[2000px]', 'opacity-100');
+				answer.classList.add('max-h-0', 'opacity-0');
+				}
+			}
+			
+			// Обработчик клика по кнопке
+			function handleFaqClick(e) {
+				const button = e.currentTarget;
+				
+				// Опционально: закрыть другие открытые ответы при открытии нового
+				// Раскомментируйте следующую строку, если хотите такое поведение
+				// closeAllAnswers();
+				
+				toggleAnswer(button);
+			}
+			
+			// Добавляем обработчики событий для каждой кнопки
+			faqButtons.forEach(button => {
+				button.addEventListener('click', handleFaqClick);
+				
+				// Инициализируем иконки (все вертикальные линии должны быть повернуты)
+				const svgRects = button.querySelectorAll('svg rect');
+				svgRects.forEach((rect, index) => {
+				if (index === 1) { // Второй прямоугольник
+					rect.classList.add('rotate-90');
+				}
+				});
+			});
+			
+			// Опционально: открыть первый вопрос по умолчанию
+			// faqButtons[0]?.click();
+			});
+		</script>
+
+	</body>
+	
+	</html>
